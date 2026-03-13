@@ -1,0 +1,77 @@
+_schema-version: "3.2"
+ID: cars-cap-ui5-complete
+version: 1.0.0
+
+modules:
+
+  - name: cars-srv
+    type: nodejs
+    path: srv
+    parameters:
+      memory: 256M
+    provides:
+      - name: srv-api
+        properties:
+          url: ${default-url}
+    requires:
+      - name: cars-db
+      - name: cars-uaa
+
+  - name: cars-db-deployer
+    type: hdb
+    path: db
+    requires:
+      - name: cars-db
+
+  - name: cars-ui
+    type: html5
+    path: app/cars-ui
+    build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - npm run build
+    requires:
+      - name: cars-html5-repo-host
+
+  - name: cars-approuter
+    type: approuter.nodejs
+    path: approuter
+    parameters:
+      memory: 128M
+    requires:
+      - name: cars-uaa
+      - name: cars-html5-repo-runtime
+      - name: srv-api
+      - name: cars-destination
+
+resources:
+
+  - name: cars-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service-plan: hdi-shared
+
+  - name: cars-uaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+
+  - name: cars-html5-repo-host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-host
+
+  - name: cars-html5-repo-runtime
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-runtime
+
+  - name: cars-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite

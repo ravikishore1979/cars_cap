@@ -1,0 +1,16 @@
+{
+  "name": "cars-ui",
+  "scripts": {
+    "start": "ui5 serve --open index.html",
+    "build": "ui5 build",
+    "test:unit": "qunit webapp/test/unit",
+    "test:opa": "qunit webapp/test/integration",
+    "test:wdi5": "echo wdi5",
+    "test:uiveri5": "echo uiveri5"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^3",
+    "qunit": "^2",
+    "eslint": "^8"
+  }
+}

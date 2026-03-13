@@ -1,0 +1,9 @@
+
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="cars.controller.Cars">
+<Page title="Cars Catalog">
+<List items="{/Cars}">
+<StandardListItem title="{model}" description="{maker/name}" info="{price}" press="onSelect"/>
+</List>
+<Button text="Go to Cart" press="onCart"/>
+</Page>
+</mvc:View>

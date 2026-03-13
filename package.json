@@ -1,0 +1,27 @@
+{
+  "name": "cars-cap-ui5-complete",
+  "private": true,
+  "scripts": {
+    "start": "cds run",
+    "lint": "eslint .",
+    "test:unit": "npm --prefix app/cars-ui run test:unit",
+    "test:opa": "npm --prefix app/cars-ui run test:opa",
+    "test:wdi5": "npm --prefix app/cars-ui run test:wdi5",
+    "test:uiveri5": "npm --prefix app/cars-ui run test:uiveri5",
+    "test": "npm run test:unit && npm run test:opa && npm run test:wdi5 && npm run test:uiveri5",
+    "build:mtar": "mbt build"
+  },
+  "dependencies": {
+    "@sap/cds": "^7",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "@ui5/cli": "^3",
+    "qunit": "^2",
+    "wdi5": "^2",
+    "uiveri5": "^2",
+    "@wdio/cli": "^8",
+    "mbt": "^1.2"
+  }
+}

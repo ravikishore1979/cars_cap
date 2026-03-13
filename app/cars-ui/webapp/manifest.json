@@ -1,0 +1,20 @@
+
+{
+ "sap.app":{"id":"cars","type":"application"},
+ "sap.ui5":{
+  "rootView":{"viewName":"cars.view.App","type":"XML"},
+  "routing":{
+   "config":{"routerClass":"sap.m.routing.Router","viewType":"XML","viewPath":"cars.view","controlId":"app","controlAggregation":"pages"},
+   "routes":[
+    {"pattern":"","name":"cars","target":"cars"},
+    {"pattern":"cart","name":"cart","target":"cart"},
+    {"pattern":"reports","name":"reports","target":"reports"}
+   ],
+   "targets":{
+    "cars":{"viewName":"Cars"},
+    "cart":{"viewName":"Cart"},
+    "reports":{"viewName":"Reports"}
+   }
+  }
+ }
+}

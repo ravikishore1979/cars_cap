@@ -1,0 +1,19 @@
+ID,model,maker_ID,price,electric,stock
+1,BMW Model1,1,72624,true,9
+2,BMW Model2,1,31705,false,11
+3,BMW Model3,1,69791,false,6
+4,Tesla Model1,2,29508,true,19
+5,Tesla Model2,2,64713,false,13
+6,Tesla Model3,2,32814,false,21
+7,Toyota Model1,3,52870,true,19
+8,Toyota Model2,3,48533,true,24
+9,Toyota Model3,3,62630,false,17
+10,Hyundai Model1,4,65767,true,17
+11,Hyundai Model2,4,30554,true,12
+12,Hyundai Model3,4,79498,false,7
+13,Tata Model1,5,49118,true,15
+14,Tata Model2,5,69234,false,18
+15,Tata Model3,5,27110,true,8
+16,Maruthi Model1,6,59914,false,16
+17,Maruthi Model2,6,25364,false,8
+18,Maruthi Model3,6,73266,false,11

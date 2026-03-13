@@ -1,0 +1,7 @@
+
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="cars.controller.Cart">
+<Page title="Shopping Cart">
+<Text text="Cart page"/>
+<Button text="Back" press="onBack"/>
+</Page>
+</mvc:View>
