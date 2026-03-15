@@ -1,0 +1,14 @@
+module.exports = [
+  {
+    languageOptions: {
+      globals: {
+        browser: true,
+        node: true,
+      },
+    },
+    rules: {
+      "no-unused-vars": "warn",
+      "no-undef": "error",
+    },
+  },
+];
