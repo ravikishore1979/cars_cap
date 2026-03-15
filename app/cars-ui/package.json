@@ -1,5 +1,6 @@
 {
   "name": "cars-ui",
+  "version": "1.0.0",
   "scripts": {
     "start": "ui5 serve --open index.html",
     "build": "ui5 build",

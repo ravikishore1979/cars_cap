@@ -1,1 +1,6 @@
 /.idea/
+/node_modules/
+/mta_archives/
+/approuter/node_modules/
+/app/cars-ui/node_modules/
+/app/cars-ui/dist/

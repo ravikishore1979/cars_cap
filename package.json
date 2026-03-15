@@ -1,5 +1,6 @@
 {
   "name": "cars-cap-ui5-complete",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "cds run",
@@ -19,8 +20,8 @@
     "eslint": "^8",
     "@ui5/cli": "^3",
     "qunit": "^2",
-    "wdi5": "^2",
-    "uiveri5": "^2",
+    "wdi5": "0.7.0",
+    "uiveri5": "git+https://github.com/SAP/ui5-uiveri5.git",
     "@wdio/cli": "^8",
     "mbt": "^1.2"
   }
